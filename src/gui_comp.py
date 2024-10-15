@@ -1,28 +1,11 @@
-import customtkinter as ctk
 import file
-from tkinter import filedialog, ttk, simpledialog
+import customtkinter as ctk
 import tkinter as tk
+from tkinter import filedialog, ttk
 
-
-class CSVApp(ctk.CTk):
-    def __init__(self):
-        super().__init__()
-
-        # Set window properties
-        self.title("CSV Viewer")
-        self.geometry("800x600")
-
-        # Create frame for buttons
-        self.button_frame = ctk.CTkFrame(self)
-        self.button_frame.pack(pady=20)
-
-        # Load CSV button
-        self.load_button = ctk.CTkButton(self.button_frame, text="Load CSV", command=self.load_csv)
-        self.load_button.grid(row=0, column=0, padx=10)
-
-        # Exit button
-        self.exit_button = ctk.CTkButton(self.button_frame, text="Exit", command=self.quit)
-        self.exit_button.grid(row=0, column=1, padx=10)
+class Table(ctk.CTkFrame):
+    def __init__(self, master):
+        super().__init__(master)
 
         # Create Treeview to display CSV data with Scrollbars
         self.tree_frame = ctk.CTkFrame(self)
@@ -47,6 +30,24 @@ class CSVApp(ctk.CTk):
 
         # Bind double-click event for editing column headers
         self.tree.bind("<Double-1>", self.edit_column_header)
+
+    def edit_column_header(self, event):
+        # Identify which column header was double-clicked
+        region = self.tree.identify("region", event.x, event.y)
+        if region == "heading":
+            column_id = self.tree.identify_column(event.x)
+            column_index = int(column_id.replace("#", "")) - 1  # Get column index
+
+            # Get current column header
+            current_header = self.tree.heading(self.tree["columns"][column_index], "text")
+
+            # Prompt the user to input a new column name
+            dialog = ctk.CTkInputDialog(title="Edit Header", text=f"Rename '{current_header}' to:")
+            new_header = dialog.get_input()
+
+            if new_header:
+                # Update the column header with the new name
+                self.tree.heading(self.tree["columns"][column_index], text=new_header)
 
     def load_csv(self):
         # Open file dialog to select CSV
@@ -77,28 +78,3 @@ class CSVApp(ctk.CTk):
 
             except Exception as e:
                 print(f"Error loading CSV: {e}")
-
-    def edit_column_header(self, event):
-        # Identify which column header was double-clicked
-        region = self.tree.identify("region", event.x, event.y)
-        if region == "heading":
-            column_id = self.tree.identify_column(event.x)
-            column_index = int(column_id.replace("#", "")) - 1  # Get column index
-
-            # Get current column header
-            current_header = self.tree.heading(self.tree["columns"][column_index], "text")
-
-            # Prompt the user to input a new column name
-            new_header = simpledialog.askstring("Edit Column Header", f"Rename '{current_header}' to:")
-
-            if new_header:
-                # Update the column header with the new name
-                self.tree.heading(self.tree["columns"][column_index], text=new_header)
-
-
-if __name__ == "__main__":
-    ctk.set_appearance_mode("System")  # Modes: system (default), light, dark
-    ctk.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
-
-    app = CSVApp()
-    app.mainloop()
