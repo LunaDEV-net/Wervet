@@ -2,15 +2,17 @@ import csv
 import os
 
 
-def read_csv_file(path: str):
+def read_csv_file(path: str, skip_header: bool = True) -> list:
     content: list = []
     with open(path, "r") as file:
         reader = csv.reader(file, delimiter=";")
-        # SKIP HEADER (fist line)
-        next(reader)
+        if skip_header == True:
+            # SKIP HEADER (fist line)
+            next(reader)
 
-        for row in reader:
-            content.append(row)
+        # for row in reader:
+        #     content.append(row)
+        content = [row for row in reader] # the same as the for loop above
     return content
 
 
