@@ -1,9 +1,4 @@
-import os
-import file
-import customtkinter as ctk
 from gui_comp import *
-import tkinter as tk
-from tkinter import filedialog, ttk, simpledialog
 from src.const import Custom  # Import the Custom class
 
 ctk.set_appearance_mode("Light")  # Modes: "System" (standard), "Dark", "Light"

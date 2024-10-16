@@ -1,5 +1,5 @@
 import os
-import cli, data, file, gui, const
+import file, const
 from src.data import process_data
 
 
