@@ -1,9 +1,11 @@
-import os
-import file, const
+import argparse
+import pathlib
+import file
+import const
 from src.data import process_data
 
 
-def main(path_in: str, path_out: str):
+def main(path_in: pathlib.Path, path_out: pathlib.Path):
     file_contents = file.read_csv_file(path_in)
     const_data = const.Default()
     processed_data: dict = process_data(file_contents, const_data)
@@ -11,12 +13,12 @@ def main(path_in: str, path_out: str):
 
 
 if __name__ == '__main__':
-    main(os.getcwd()+"/data/in.csv", os.getcwd()+"/data/out.csv")
+    parser = argparse.ArgumentParser(description="Process some CSV files.")
+    parser.add_argument('path_in', type=pathlib.Path, help='Input CSV file path')
+    parser.add_argument('path_out', type=pathlib.Path, help='Output CSV file path')
 
+    args = parser.parse_args()
 
-# def main():
-#     app = gui.App()
-#     app.mainloop()
-#
-# if __name__ == '__main__':
-#     main()
+    print(args.path_in)
+
+    main(args.path_in, args.path_out)

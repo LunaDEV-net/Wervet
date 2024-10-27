@@ -51,6 +51,16 @@ class Default:
     POS_BEOBACHTUNGEN_GESAMT = 9
     POS_HDS_GESAMT = 10
 
+    # indexe
+    beobachtungs_id = 1
+    stationsname = 2
+    beobachtet_von = 3
+    beobachtet_bis = 4
+    berufsgruppe = 7
+    indikator = 8
+    hd = 9
+    handschue = 10
+
 class Custom:
     indexe_indikatoren: dict = {}
     indexe_berufsgruppen: dict = {}
@@ -68,6 +78,16 @@ class Custom:
 
     POS_BEOBACHTUNGEN_GESAMT = None
     POS_HDS_GESAMT = None
+
+    # indexe
+    beobachtungs_id = None
+    stationsname = None
+    beobachtet_von = None
+    beobachtet_bis = None
+    berufsgruppe = None
+    indikator = None
+    hd = None
+    handschue = None
 
     def __init__(self, indexe_indikatoren: dict, indexe_berufsgruppen: dict, Compliances: list, POS_STATIONSNAME: int, POS_OFFIZIELLE_ART: int, POS_TYP: int, POS_AUTOMATISCHE_BEZEICHNUNG: int, POS_BEOBACHTET_BIS_AUTO: int, POS_BERUFSGRUPPE: int, POS_HANDSCHUHE_ERHOBEN: int, POS_BEOBACHTET_VON: int, POS_BEOBACHTET_BIS: int, POS_BEOBACHTUNGEN_GESAMT: int, POS_HDS_GESAMT: int):
         self.indexe_indikatoren = indexe_indikatoren
