@@ -2,7 +2,7 @@ import argparse
 import pathlib
 import file
 import const
-from src.data import process_data
+from data import process_data
 
 
 def main(path_in: pathlib.Path, path_out: pathlib.Path):
