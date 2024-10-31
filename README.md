@@ -1,1 +1,1 @@
-https://docs.python.org/3/libary/venv.html
+https://docs.python.org/3/library/venv.html
