@@ -4,4 +4,5 @@ echo "in venv gehen"
 echo "main ausführen in standart configuration (data Ordner)"
 python .\src\main.py .\data\input.csv .\data\output.csv
 echo "fertig, zum Beenden Enter drücken"
+deactivate
 PAUSE
