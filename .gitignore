@@ -1,4 +1,4 @@
-./data/*
-/data/in.csv
-/data/out.csv
-/.idea/csv-editor.xml
+data/*
+data/in.csv
+data/out.csv
+.idea/csv-editor.xml

@@ -1,10 +1,5 @@
 from const import Default
-
-def check_data(data_in: list) -> bool:
-    pass
-
-def initialize_data_dict():
-    pass
+import tests
 
 def setup_data(data_dict: dict, const_data: Default, beobachtungs_id, stationsname, beobachtet_von, beobachtet_bis) -> dict:
     # setup
@@ -43,8 +38,44 @@ def setup_data(data_dict: dict, const_data: Default, beobachtungs_id, stationsna
 
     return data_dict
 
-def update_data_dict(data_dict: dict, line: list, const_data: Default) -> dict:
-    pass
+def update_data_dict(data_dict: dict, beobachtungs_id, berufsgruppe, indikator, hd, handschue, const_data: Default) -> dict:
+    berufindex = const_data.indexe_berufsgruppen[berufsgruppe]
+    if not indikator.startswith("vor asept. Tätigkeit: "):
+        indikatorindex = const_data.indexe_indikatoren[indikator]
+    elif indikator.startswith("vor asept. Tätigkeit: "):
+        indikatorindex = const_data.indexe_indikatoren["vor asept. Tätigkeit: *"]
+
+    # gesamt vorne
+    data_dict[beobachtungs_id][0][const_data.POS_BEOBACHTUNGEN_GESAMT] += 1
+    data_dict[beobachtungs_id][berufindex][const_data.POS_BEOBACHTUNGEN_GESAMT] += 1
+    if hd == "Ja":
+        data_dict[beobachtungs_id][0][const_data.POS_HDS_GESAMT] += 1
+        data_dict[beobachtungs_id][berufindex][const_data.POS_HDS_GESAMT] += 1
+    # GIbt kein Feld für Handschue vorne
+
+    # fein
+    data_dict[beobachtungs_id][0][indikatorindex] += 1  # Gesamt Job egal
+    data_dict[beobachtungs_id][berufindex][indikatorindex] += 1  # Gesamt Job spez
+    if hd == "Ja":
+        data_dict[beobachtungs_id][0][indikatorindex + 1] += 1  # HDs Job egal
+        data_dict[beobachtungs_id][berufindex][indikatorindex + 1] += 1  # HDs. Job spez
+    if handschue == "Ja":
+        data_dict[beobachtungs_id][0][indikatorindex + 3] += 1  # HDs Job egal
+        data_dict[beobachtungs_id][berufindex][indikatorindex + 3] += 1  # HDs. Job spez
+
+    if indikator.startswith("vor asept. Tätigkeit: "):
+        ganzfein_indikatorindex = const_data.indexe_indikatoren[indikator]
+        data_dict[beobachtungs_id][0][ganzfein_indikatorindex] += 1  # Gesamt Job egal
+        data_dict[beobachtungs_id][berufindex][ganzfein_indikatorindex] += 1  # Gesamt Job spez
+        if hd == "Ja":
+            data_dict[beobachtungs_id][0][ganzfein_indikatorindex + 1] += 1  # HDs Job egal
+            data_dict[beobachtungs_id][berufindex][ganzfein_indikatorindex + 1] += 1  # HDs. Job spez
+        if handschue == "Ja":
+            data_dict[beobachtungs_id][0][ganzfein_indikatorindex + 3] += 1  # HDs Job egal
+            data_dict[beobachtungs_id][berufindex][ganzfein_indikatorindex + 3] += 1  # HDs. Job spez
+
+    return data_dict
+
 
 def calculate_compliance(data_dict: dict, const_data: Default) -> dict:
     for beob_id in data_dict.keys():
@@ -57,6 +88,7 @@ def calculate_compliance(data_dict: dict, const_data: Default) -> dict:
 
 def process_data(data_in: list, const_data: Default) -> dict:
     data_dict: dict = {}
+    tests.check_data(data_in, const_data)
     for line in data_in:
         beobachtungs_id = line[const_data.beobachtungs_id]
         stationsname = line[const_data.stationsname]
@@ -68,43 +100,7 @@ def process_data(data_in: list, const_data: Default) -> dict:
         handschue = line[const_data.handschue]
 
         data_dict = setup_data(data_dict, const_data, beobachtungs_id, stationsname, beobachtet_von, beobachtet_bis)
+        data_dict = update_data_dict(data_dict, beobachtungs_id, berufsgruppe, indikator, hd, handschue, const_data)
+    data_dict = calculate_compliance(data_dict, const_data)
 
-
-        berufindex = const_data.indexe_berufsgruppen[berufsgruppe]
-        if not indikator.startswith("vor asept. Tätigkeit: "):
-            indikatorindex = const_data.indexe_indikatoren[indikator]
-        elif indikator.startswith("vor asept. Tätigkeit: "):
-            indikatorindex = const_data.indexe_indikatoren["vor asept. Tätigkeit: *"]
-
-        # gesamt vorne
-        data_dict[beobachtungs_id][0][const_data.POS_BEOBACHTUNGEN_GESAMT] += 1
-        data_dict[beobachtungs_id][berufindex][const_data.POS_BEOBACHTUNGEN_GESAMT] += 1
-        if hd == "Ja":
-            data_dict[beobachtungs_id][0][const_data.POS_HDS_GESAMT] += 1
-            data_dict[beobachtungs_id][berufindex][const_data.POS_HDS_GESAMT] += 1
-        # GIbt kein Feld für Handschue vorne
-
-        # fein
-        data_dict[beobachtungs_id][0][indikatorindex] += 1 # Gesamt Job egal
-        data_dict[beobachtungs_id][berufindex][indikatorindex] += 1 # Gesamt Job spez
-        if hd == "Ja":
-            data_dict[beobachtungs_id][0][indikatorindex+1] += 1 # HDs Job egal
-            data_dict[beobachtungs_id][berufindex][indikatorindex+1] += 1 # HDs. Job spez
-        if handschue == "Ja":
-            data_dict[beobachtungs_id][0][indikatorindex+3] += 1 # HDs Job egal
-            data_dict[beobachtungs_id][berufindex][indikatorindex+3] += 1 # HDs. Job spez
-
-        if indikator.startswith("vor asept. Tätigkeit: "):
-            ganzfein_indikatorindex = const_data.indexe_indikatoren[indikator]
-            data_dict[beobachtungs_id][0][ganzfein_indikatorindex] += 1  # Gesamt Job egal
-            data_dict[beobachtungs_id][berufindex][ganzfein_indikatorindex] += 1  # Gesamt Job spez
-            if hd == "Ja":
-                data_dict[beobachtungs_id][0][ganzfein_indikatorindex + 1] += 1  # HDs Job egal
-                data_dict[beobachtungs_id][berufindex][ganzfein_indikatorindex + 1] += 1  # HDs. Job spez
-            if handschue == "Ja":
-                data_dict[beobachtungs_id][0][ganzfein_indikatorindex + 3] += 1  # HDs Job egal
-                data_dict[beobachtungs_id][berufindex][ganzfein_indikatorindex + 3] += 1  # HDs. Job spez
-
-
-                pass
     return data_dict

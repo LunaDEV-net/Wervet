@@ -6,7 +6,7 @@ def read_csv_file(path: str, skip_header: bool = True) -> list:
     content: list = []
     with open(path, "r") as file:
         reader = csv.reader(file, delimiter=";")
-        if skip_header == True:
+        if True == skip_header:
             # SKIP HEADER (fist line)
             next(reader)
 

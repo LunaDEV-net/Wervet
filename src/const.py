@@ -37,6 +37,10 @@ class Default:
         indexe_indikatoren['vor asept. Tätigkeit: keine Angabe'] + 2,  # Compliance sonstige
     ]
 
+    number_of_colums = 14
+    should_not_be_empty_colums = [0,1,2,3,4,5,6,7,8,9] # [x for x in range(0, 10+1)]
+    disallowed_characters = ["*"]
+
     # const
     POS_STATIONSNAME = 0
     POS_OFFIZIELLE_ART = 1
@@ -62,45 +66,4 @@ class Default:
     handschue = 10
 
 class Custom:
-    indexe_indikatoren: dict = {}
-    indexe_berufsgruppen: dict = {}
-    Compliances: list = []
-    # const
-    POS_STATIONSNAME = None
-    POS_OFFIZIELLE_ART = None
-    POS_TYP = None
-    POS_AUTOMATISCHE_BEZEICHNUNG = None
-    POS_BEOBACHTET_BIS_AUTO = None
-    POS_BERUFSGRUPPE = None
-    POS_HANDSCHUHE_ERHOBEN = None
-    POS_BEOBACHTET_VON = None
-    POS_BEOBACHTET_BIS = None
-
-    POS_BEOBACHTUNGEN_GESAMT = None
-    POS_HDS_GESAMT = None
-
-    # indexe
-    beobachtungs_id = None
-    stationsname = None
-    beobachtet_von = None
-    beobachtet_bis = None
-    berufsgruppe = None
-    indikator = None
-    hd = None
-    handschue = None
-
-    def __init__(self, indexe_indikatoren: dict, indexe_berufsgruppen: dict, Compliances: list, POS_STATIONSNAME: int, POS_OFFIZIELLE_ART: int, POS_TYP: int, POS_AUTOMATISCHE_BEZEICHNUNG: int, POS_BEOBACHTET_BIS_AUTO: int, POS_BERUFSGRUPPE: int, POS_HANDSCHUHE_ERHOBEN: int, POS_BEOBACHTET_VON: int, POS_BEOBACHTET_BIS: int, POS_BEOBACHTUNGEN_GESAMT: int, POS_HDS_GESAMT: int):
-        self.indexe_indikatoren = indexe_indikatoren
-        self.indexe_berufsgruppen = indexe_berufsgruppen
-        self.Compliances = Compliances
-        self.POS_STATIONSNAME = POS_STATIONSNAME
-        self.POS_OFFIZIELLE_ART = POS_OFFIZIELLE_ART
-        self.POS_TYP = POS_TYP
-        self.POS_AUTOMATISCHE_BEZEICHNUNG = POS_AUTOMATISCHE_BEZEICHNUNG
-        self.POS_BEOBACHTET_BIS_AUTO = POS_BEOBACHTET_BIS_AUTO
-        self.POS_BERUFSGRUPPE = POS_BERUFSGRUPPE
-        self.POS_HANDSCHUHE_ERHOBEN = POS_HANDSCHUHE_ERHOBEN
-        self.POS_BEOBACHTET_VON = POS_BEOBACHTET_VON
-        self.POS_BEOBACHTET_BIS = POS_BEOBACHTET_BIS
-        self.POS_BEOBACHTUNGEN_GESAMT = POS_BEOBACHTUNGEN_GESAMT
-        self.POS_HDS_GESAMT = POS_HDS_GESAMT
+    pass

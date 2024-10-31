@@ -18,7 +18,4 @@ if __name__ == '__main__':
     parser.add_argument('path_out', type=pathlib.Path, help='Output CSV file path')
 
     args = parser.parse_args()
-
-    print(args.path_in)
-
     main(args.path_in, args.path_out)
