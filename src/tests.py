@@ -1,6 +1,6 @@
 import sys
 
-from src.const import Default
+from const import Default
 
 
 def check_data(data_in: list, const_data: Default):

@@ -4,7 +4,7 @@ import os
 
 def read_csv_file(path: str, skip_header: bool = True) -> list:
     content: list = []
-    with open(path, "r") as file:
+    with open(path, "r", encoding='utf-8') as file:
         reader = csv.reader(file, delimiter=";")
         if True == skip_header:
             # SKIP HEADER (fist line)
@@ -17,7 +17,7 @@ def read_csv_file(path: str, skip_header: bool = True) -> list:
 
 
 def write_dict_to_csv(data_to_write: dict, path: str= os.getcwd() + "/data/out.csv"):
-    with open(path, 'w', newline='') as file:
+    with open(path, 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter=";")
         for key in data_to_write:
             writer.writerows(data_to_write[key])
