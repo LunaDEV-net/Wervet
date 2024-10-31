@@ -10,18 +10,18 @@ usage: main.py [-h] path_in path_out
 
 | Argument    | Type        | Description                                                           | example value   |
 | :---------- | :---------- | :-------------------------------------------------------------------- | :-------------- |
-| `path_in`   | `.csv File` | path to the raw data.                                                 | `data/input.csv`  |
-| `path_out`  | `.csv File` | desired path to the output file. **Warning: will overwrite the file** | `data/output.csv` |
+| `path_in`   | `.csv File` | path to the raw data.                                                 |`data/input.csv` |
+| `path_out`  | `.csv File` | desired path to the output file. **Warning: will overwrite the file** |`data/output.csv`|
 | `--offline` |             | does the application check for new updates                            |                 |
-| `--version`   |             | print the version                                                     |                 |
+| `--version` |             | print the version                                                     |                 |
 
 ## Deployment
 ### Requirerments
-| program/tool  | version (version I used) | usage                        |                                  |
-| ------------- | ------------------------ | ---------------------------- |          ---------               |
-| git           | latest (2.34.1)          | download program from github | optional                         |
-| python        | latest (3.13.0)          | run the programm             | requirert                        |
-| powershell    | latest (ADD)             | shell on Windows             | requirert, if your OS is Windows |
+| program/tool  | version (version I used) | usage                        |           |
+| ------------- | ------------------------ | ---------------------------- | --------- |
+| git           | latest (2.34.1)          | download program from github | optional  |
+| python        | latest (3.13.0)          | run the programm             | requirert |
+| powershell    | latest (ADD)             | shell on Windows             | requirert |
 
 ### 1. Download Projekt using git
 ```bash
@@ -39,15 +39,19 @@ python -m venv .venv
 .venv is the recomanded path, if you change it, you would also have to change the run script.
 
 ### 3. execute programm
-**On Windows**
+#### **Windows**
 
 ```shell
-.\venv\Scripts\active.ps1
-python src\main.py arguments (see usage)
+.\.venv\Scripts\Activate.ps1
+python src\main.py {arguments} (see usage)
 ```
 or 
 ```
 run.ps1
+```
+#### **Linux**
+```
+.venv/bin/python src/main.py {arguments} (see usage)
 ```
 ## Support
 
