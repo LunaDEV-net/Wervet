@@ -54,7 +54,7 @@ run.ps1
 ```
 ## Support
 
-Connatect me personaly or write a [Github Issue](https://github.com/LunaDEV-net/WebKess/issues)
+Contact me personaly or write a [Github Issue](https://github.com/LunaDEV-net/WebKess/issues)
 
 
 
