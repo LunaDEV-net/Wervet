@@ -52,6 +52,8 @@ run.ps1
 ```
 .venv/bin/python src/main.py {arguments} (see usage)
 ```
+## Known Problems
+-> see [Issues](https://github.com/LunaDEV-net/WebKess/issues)
 ## Support
 
 Contact me personaly or write a [Github Issue](https://github.com/LunaDEV-net/WebKess/issues)
