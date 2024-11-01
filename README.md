@@ -16,11 +16,11 @@ usage: main.py [-h] path_in path_out
 
 ## Deployment
 ### Requirerments
-| program/tool  | version (version I used) | usage                        |           |
-| ------------- | ------------------------ | ---------------------------- | --------- |
-| git           | latest (2.34.1)          | download program from github | optional  |
-| python        | latest (3.13.0)          | run the programm             | requirert |
-| powershell    | latest (ADD)             | shell on Windows             | requirert |
+| program/tool  | version (version I used) | usage                        |          |
+| ------------- | ------------------------ | ---------------------------- | -------- |
+| git           | latest (2.34.1)          | download program from github | optional |
+| python        | latest (3.13.0)          | run the programm             | required |
+| powershell    | latest (ADD)             | shell on Windows             | required |
 
 ### 1. Download Projekt using git
 ```bash
