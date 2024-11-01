@@ -13,13 +13,12 @@ def setup_data(data_dict: dict, const_data: Default, beobachtungs_id, stationsna
         # gebe erste daten ein
         for i in range(4):
             data_dict[beobachtungs_id][i][const_data.POS_STATIONSNAME] = stationsname
-            data_dict[beobachtungs_id][i][const_data.POS_OFFIZIELLE_ART] = "Offizielle Art"
-            data_dict[beobachtungs_id][i][const_data.POS_TYP] = "TYP"
-            data_dict[beobachtungs_id][i][const_data.POS_AUTOMATISCHE_BEZEICHNUNG] = "Automat. Bezeichnung"
-            data_dict[beobachtungs_id][i][const_data.POS_BEOBACHTET_BIS_AUTO] = "Beob. bis (MM-JJJJ)"
-            data_dict[beobachtungs_id][i][
-                const_data.POS_BERUFSGRUPPE] = "Berufsgruppe (soll nacher überschrieben werden)"
-            data_dict[beobachtungs_id][i][const_data.POS_HANDSCHUHE_ERHOBEN] = "Handschuhe erhoben?"
+            # data_dict[beobachtungs_id][i][const_data.POS_OFFIZIELLE_ART] = "Offizielle Art"
+            # data_dict[beobachtungs_id][i][const_data.POS_TYP] = "TYP"
+            # data_dict[beobachtungs_id][i][const_data.POS_AUTOMATISCHE_BEZEICHNUNG] = "Automat. Bezeichnung"
+            # data_dict[beobachtungs_id][i][const_data.POS_BEOBACHTET_BIS_AUTO] = "Beob. bis (MM-JJJJ)"
+            # data_dict[beobachtungs_id][i][const_data.POS_BERUFSGRUPPE] = "Berufsgruppe (soll nacher überschrieben werden)"
+            # data_dict[beobachtungs_id][i][const_data.POS_HANDSCHUHE_ERHOBEN] = "Handschuhe erhoben?"
             data_dict[beobachtungs_id][i][const_data.POS_BEOBACHTET_VON] = beobachtet_von
             data_dict[beobachtungs_id][i][const_data.POS_BEOBACHTET_BIS] = beobachtet_bis
 
@@ -102,5 +101,6 @@ def process_data(data_in: list, const_data: Default) -> dict:
         data_dict = setup_data(data_dict, const_data, beobachtungs_id, stationsname, beobachtet_von, beobachtet_bis)
         data_dict = update_data_dict(data_dict, beobachtungs_id, berufsgruppe, indikator, hd, handschue, const_data)
     data_dict = calculate_compliance(data_dict, const_data)
+
 
     return data_dict

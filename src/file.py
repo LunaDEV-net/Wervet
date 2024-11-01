@@ -16,9 +16,10 @@ def read_csv_file(path: str, skip_header: bool = True) -> list:
     return content
 
 
-def write_dict_to_csv(data_to_write: dict, path: str= os.getcwd() + "/data/out.csv"):
+def write_dict_to_csv(data_to_write: dict, header_to_write: list, path: str= os.getcwd() + "/data/out.csv"):
     with open(path, 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter=";")
+        writer.writerow(header_to_write)
         for key in data_to_write:
             writer.writerows(data_to_write[key])
             # for row in data_to_write[key]:

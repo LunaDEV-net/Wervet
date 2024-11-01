@@ -10,7 +10,7 @@ def main(path_in: pathlib.Path, path_out: pathlib.Path):
     file_contents = file.read_csv_file(path_in)
     const_data = const.Default()
     processed_data: dict = process_data(file_contents, const_data)
-    file.write_dict_to_csv(processed_data, path_out)
+    file.write_dict_to_csv(processed_data, const_data.header, path_out)
 
 
 if __name__ == '__main__':
@@ -25,5 +25,6 @@ if __name__ == '__main__':
     try:
         args = parser.parse_args()
         main(args.path_in, args.path_out)
-    except SystemExit:
+    except Exception as e:
+        print(e)
         parser.print_help()

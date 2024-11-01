@@ -65,5 +65,22 @@ class Default:
     hd = 9
     handschue = 10
 
+    header = [
+        "Header: Stationsname", "Offizielle Art", "TYP", "Automat. Bezeichnung", "Beob. bis (MM-JJJJ)", "Berufsgruppe", "Handschuhe erhoben", "Beobachtet von", "Beobachtet bis", "Beobachtungen gesamt", "HDS gesamt", "Compliance gesamt",
+        "Ref 10.%tile", "Ref. 25.%tile","Ref. Median","Ref. 75.%tile","Ref. 90%tile","Ref. Handschuhe","Nicht indizierte HD",
+        "Beob vor Pat.-Kontakt", "HDs vor Pat.-Kontakt", "Compl. vor Pat.-Kontakt", "HS vor Pat.-Kontakt",
+        "Beob vor asept. Tät.", "HDs vor asept. Tät.", "Compl. vor asept. Tät.", "HS vor asept. Tät.",
+        "Beob nach Material", "HDs nach Material", "Compl. nach Material", "HS nach Material",
+        "Beob nach Pat.-Kontakt", "HDs nach Pat.-Kontakt", "Compl. nach Pat.-Kontakt", "HS nach Pat.-Kontakt",
+        "Beob nach Pat.-Umgebung", "HDs nach Pat.-Umgebung", "Compl. nach Pat.-Umgebung", "HS nach Pat.-Umgebung",
+        "Beob vor Beatmung", "HDs vor Beatmung", "Compl. vor Beatmung", "HS vor Beatmung",
+        "Beob vor Med.zub.", "HDs vor Med.zub.", "Compl. vor Med.zub.", "HS vor Med.zub.",
+        "Beob vor Zugänge", "HDs vor Zugänge", "Compl. vor Zugänge", "HS vor Zugänge",
+        "Beob vor Verb/Drg.", "HDs vor Verb/Drg.", "Compl. vor Verb/Drg.", "HS vor Verb/Drg.",
+        "Beob vor Punktionen", "HDs vor Punktionen", "Compl. vor Punktionen", "HS vor Punktionen",
+        "Beob vor Schleimhaut", "HDs vor Schleimhaut", "Compl. vor Schleimhaut", "HS vor Schleimhaut",
+        "Beob vor sonstige", "HDs vor sonstige", "Compl. vor sonstige", "HS vor sonstige",
+    ]
+
 class Custom:
     pass
