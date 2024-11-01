@@ -12,7 +12,6 @@ usage: main.py [-h] path_in path_out
 | :---------- | :---------- | :-------------------------------------------------------------------- | :-------------- |
 | `path_in`   | `.csv File` | path to the raw data.                                                 |`data/input.csv` |
 | `path_out`  | `.csv File` | desired path to the output file. **Warning: will overwrite the file** |`data/output.csv`|
-| `--offline` |             | does the application check for new updates                            |                 |
 | `--version` |             | print the version                                                     |                 |
 
 ## Deployment
