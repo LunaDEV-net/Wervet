@@ -5,7 +5,7 @@ A local python tool to turn raw data from the [Aktion Saubere Hände](https://ww
 ## usage
 
 ```shell
-usage: main.py [-h] path_in path_out
+usage: main.py [-h] [--version] path_in path_out
 ```
 
 | Argument    | Type        | Description                                                           | example value   |
