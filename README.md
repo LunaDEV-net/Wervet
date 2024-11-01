@@ -1,7 +1,7 @@
 
 # WebKess
 
-A local python tool to turn raw data from the [Aktion Saubere Hände](https://www.aktion-sauberehaende.de/ueber-uns-ash) into an statistically evaluated
+A local python tool to turn raw data from the [Aktion Saubere Hände](https://www.aktion-sauberehaende.de/ueber-uns-ash) into an excel friendly dataset.
 ## usage
 
 ```shell
