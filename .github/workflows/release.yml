@@ -2,9 +2,6 @@ name: Create Release
 
 on:
   workflow_dispatch:  # Enables manual trigger
-  push:
-    tags:
-      - 'v*'  # Triggers on version tags like v1.0.0
 
 jobs:
   build:
@@ -12,12 +9,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
-          python-version: 'latest'
+          python-version: '3.x'
 
       - name: Create virtual environment
         run: python -m venv .venv
@@ -25,21 +22,14 @@ jobs:
       - name: Activate virtual environment and run script
         run: |
           .\.venv\Scripts\activate
-          python src\main.py path_in path_out
+          python src\main.py example_data\example_input.csv .\test_output.csv
 
       - name: Check output file
         run: |
-          if (-Not (Compare-Object (Get-Content path_out) (Get-Content output.csv))) {
+          if (-Not (Compare-Object (Get-Content .\test_output.csv) (Get-Content example_data\example_input.csv))) {
             Write-Host "Output file does not match the example."
             exit 1  # Fail the job
           } else {
             Write-Host "Output file matches the example."
           }
 
-      - name: Zip the codebase
-        run: Compress-Archive -Path . -DestinationPath my_codebase.zip  # Change 'my_codebase.zip' to your desired zip file name.
-
-      - name: Upload Release Asset
-        uses: ncipollo/release-action@v1
-        with:
-          files: my_codebase.zip  # Change this to match your zip file name
