@@ -24,4 +24,3 @@ def write_dict_to_csv(data_to_write: dict, header_to_write: list, path: str= os.
             writer.writerows(data_to_write[key])
             # for row in data_to_write[key]:
             #     writer.writerow(row)
-

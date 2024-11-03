@@ -1,6 +1,6 @@
 import sys
 
-from configuration import Default
+from configuration import Default, configuration
 
 
 def check_data(data_in: list, const_data: Default):
@@ -28,4 +28,4 @@ def check_data(data_in: list, const_data: Default):
 
     pass
 if __name__ == '__main__':
-    check_data([["a","d","s","f","g","h","h","j","k","l","ö","","",]], Default())
+    check_data([["a","d","s","f","g","h","h","j","k","l","ö","","",]], configuration)

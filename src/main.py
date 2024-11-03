@@ -9,7 +9,7 @@ __version__ = "2024-11-1_v1.9"
 def main(path_in: pathlib.Path, path_out: pathlib.Path):
     file_contents = file.read_csv_file(path_in)
     print("Read file")
-    config = configuration.Default()
+    config = configuration.configuration
     print("Got ")
     processed_data: dict = process_data(file_contents, config)
     file.write_dict_to_csv(processed_data, config.header, path_out)

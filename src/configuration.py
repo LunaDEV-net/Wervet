@@ -84,3 +84,5 @@ class Default:
 
 class Custom:
     pass
+
+configuration = Default()
