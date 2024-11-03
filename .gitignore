@@ -2,3 +2,6 @@ data/*
 .idea/*
 src/__pycache__/*
 .venv/
+
+# dateien die er noch behalten soll
+!data/hier_input_datei_als_input-csv_ablegen.txt

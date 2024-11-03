@@ -82,7 +82,7 @@ def calculate_compliance(data_dict: dict, const_data: Default) -> dict:
             for comp_index in const_data.compliance:
                 beob = data_dict[beob_id][i][comp_index - 2]
                 hds = data_dict[beob_id][i][comp_index - 1]
-                data_dict[beob_id][i][comp_index] = int(round(hds / beob, 2) * 100) if beob != 0 else 0
+                data_dict[beob_id][i][comp_index] = int(round(hds / beob * 100, 0)) if beob != 0 else ""
     return data_dict
 
 def process_data(data_in: list, const_data: Default) -> dict:
