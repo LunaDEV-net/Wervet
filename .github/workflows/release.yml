@@ -1,7 +1,9 @@
-name: Create Release
+name: Check if code is running
 
 on:
-  workflow_dispatch:  # Enables manual trigger
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -32,4 +34,3 @@ jobs:
           } else {
             Write-Host "Output file matches the example."
           }
-
