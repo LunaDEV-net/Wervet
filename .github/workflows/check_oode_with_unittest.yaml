@@ -1,0 +1,29 @@
+name: Check with unittest
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Create virtual environment
+        run: python -m venv .venv
+
+      - name: Activate virtual environment
+        run: |
+          .\.venv\Scripts\activate
+      - name: run unittest
+        run: |
+           python -m unittest discover -s src\tests\ -p 'test_*.py'
