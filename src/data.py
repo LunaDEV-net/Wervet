@@ -90,7 +90,7 @@ def calculate_compliance(data_dict: dict, const_data: Default) -> dict:
 
 def process_data(data_in: list, const_data: Default) -> dict:
     data_dict: dict = {}
-    runtime_tests.check_data(data_in, const_data)
+    runtime_tests.check_data(data_in)
     for line in data_in:
         beobachtungs_id = line[const_data.beobachtungs_id]
         stationsname = line[const_data.stationsname]
