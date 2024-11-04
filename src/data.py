@@ -1,5 +1,8 @@
+#  Copyright (c) 2024 by https://github.com/LunaDEV-net.
+#  all rights reserved
+
 from configuration import Default
-import tests
+import runtime_tests
 
 def setup_data(data_dict: dict, const_data: Default, beobachtungs_id, stationsname, beobachtet_von, beobachtet_bis) -> dict:
     # setup
@@ -87,7 +90,7 @@ def calculate_compliance(data_dict: dict, const_data: Default) -> dict:
 
 def process_data(data_in: list, const_data: Default) -> dict:
     data_dict: dict = {}
-    tests.check_data(data_in, const_data)
+    runtime_tests.check_data(data_in, const_data)
     for line in data_in:
         beobachtungs_id = line[const_data.beobachtungs_id]
         stationsname = line[const_data.stationsname]

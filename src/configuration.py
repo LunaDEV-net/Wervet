@@ -1,3 +1,6 @@
+#  Copyright (c) 2024 by https://github.com/LunaDEV-net.
+#  all rights reserved
+
 class Default:
     indexe_indikatoren: dict = {
         'vor Kontakt mit Patienten': 19,
