@@ -22,9 +22,9 @@ def check_data(data_in: list):
     empty_columns(data_in)
     for line_num, line in enumerate(data_in):
         for columns in line:
-            if any(char in columns for char in const_data.disallowed_characters):
-                sys.exit(f"Test 4 failed: Disallowed character ({const_data.disallowed_characters}) found in line {line_num}")
-        if line[const_data.indikator] not in const_data.indexe_indikatoren:
+            if any(char in columns for char in config.disallowed_characters):
+                sys.exit(f"Test 4 failed: Disallowed character ({config.disallowed_characters}) found in line {line_num}")
+        if line[config.indikator] not in config.indexe_indikatoren:
             sys.exit(f"Test 5 failed: Indikator not found in indexe_indikatoren in line {line_num}")
 
 

@@ -34,4 +34,4 @@ if __name__ == '__main__':
         print(f"Done. Written to {args.path_out}")
     except Exception as e:
         print(e)
-        print("\n Please use --help for more information.")
+        print("\nPlease use --help for more information.")
