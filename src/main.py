@@ -14,7 +14,7 @@ def main(path_in: pathlib.Path, path_out: pathlib.Path):
     print("Read file")
     config = configuration.configuration
     print("Got ")
-    processed_data: dict = process_data(file_contents, config)
+    processed_data: dict = process_data(file_contents)
     file.write_dict_to_csv(processed_data, config.header, path_out)
 
 
