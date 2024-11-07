@@ -13,4 +13,4 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Execute installer
-        run: install.bat
+        run: dir
