@@ -15,7 +15,10 @@ def main(path_in: pathlib.Path, path_out: pathlib.Path):
     config = configuration.configuration
     print("Got ")
     processed_data: dict = process_data(file_contents)
-    file.write_dict_to_csv(processed_data, config.header, path_out)
+    try:
+        file.write_dict_to_csv(processed_data, config.header, path_out)
+    except PermissionError as PermissionE:
+        print(f"Caught an exception: {PermissionE} \n Maybe the file is opened by another programm or you don't have the permission to access this file")
 
 
 if __name__ == '__main__':
