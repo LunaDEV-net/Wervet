@@ -1,0 +1,16 @@
+name: Check install.bat
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Execute installer
+        run: install.bat
