@@ -10,7 +10,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: winget
+      - name: winget
         shell: pwsh
         run: |
           # Install NtObjectManager module
@@ -28,7 +28,8 @@ jobs:
           $installationPath = (Get-AppxPackage Microsoft.DesktopAppInstaller).InstallLocation
           Set-ExecutionAlias -Path "C:\Windows\System32\winget.exe" -PackageName "Microsoft.DesktopAppInstaller_8wekyb3d8bbwe" -EntryPoint "Microsoft.DesktopAppInstaller_8wekyb3d8bbwe!winget" -Target "$installationPath\AppInstallerCLI.exe" -AppType Desktop -Version 3
           explorer.exe "shell:appsFolder\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe!winget"
-      - run: |
+      - name: test winget
+        run: |
           winget --info
       - name: Checkout code
         uses: actions/checkout@v4
