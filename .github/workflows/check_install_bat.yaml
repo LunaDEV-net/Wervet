@@ -8,10 +8,11 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-
+    defaults:
+      run:
+        shell: pwsh
     steps:
       - name: winget
-        shell: pwsh
         run: |
           # Install NtObjectManager module
           Install-Module NtObjectManager -Force
