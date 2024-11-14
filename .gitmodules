@@ -1,3 +1,0 @@
-[submodule "Scripts/winget-install"]
-	path = Scripts/winget-install
-	url = https://github.com/asheroto/winget-install.git

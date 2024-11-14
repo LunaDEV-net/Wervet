@@ -5,6 +5,7 @@ import argparse
 import pathlib
 import file
 import configuration
+import sys
 from data import process_data
 
 __version__ = "2024-11-1_v1.9"
@@ -19,6 +20,7 @@ def main(path_in: pathlib.Path, path_out: pathlib.Path):
         file.write_dict_to_csv(processed_data, config.header, path_out)
     except PermissionError as PermissionE:
         print(f"Caught an exception: {PermissionE} \n Maybe the file is opened by another programm or you don't have the permission to access this file")
+        sys.exit(1)
 
 
 if __name__ == '__main__':
