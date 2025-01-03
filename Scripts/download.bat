@@ -29,7 +29,7 @@ echo - Git...
 echo. 
 winget install Git.Git
 echo.
-echo     - Ueberpruefe GitInstalation
+echo     - Ueberpruefe Git Instalation
 git -v
 if %errorlevel% equ 0 (
     echo Git ist richtig installiert
@@ -43,3 +43,7 @@ echo Klonen
 echo.
 git clone https://github.com/LunaDEV-net/WebKess
 echo.
+cd WebKess
+explorer .
+cd Scripts
+install_venv.bat
