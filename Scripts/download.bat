@@ -47,3 +47,5 @@ cd WebKess
 explorer .
 cd Scripts
 install_venv.bat
+echo Fertig
+PAUSE
