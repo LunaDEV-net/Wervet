@@ -13,65 +13,37 @@
 ---
 
 ## Installation
-### mit Downloadscript (Einfach)
+### mit Downloadscript
 **Funktioniert nur auf Windows**
 1. Die Release-Website öffnen: https://github.com/LunaDEV-net/WebKess/releases
 2. Die Datei `download.bat` herunterladen. <br> <img src="imgs/2025-01-03_WebKess_Manual-Download-bat.jpg">
 3. Die heruntergeladene Datei in den Überordner kopieren, wo das Programm hingeladen werden soll: <br> Z.B. Wenn die `download.bat` im Pfad `D:\Programme\download.bat` liegt, dann wird das Programm nach `D:\Programme\WebKess` installiert
 4. Sobald die `download.bat` an der gewünschten Stelle liegt, diese im File-Explorer mit einem Doppelklick öffnen.
-5. 
-### erweitert
-1. **Benötigte Software installieren**
-   - **Python 3.13.0** (oder höher)
-   - **Git** (optional, zum Herunterladen des Projekts)
-   - **PowerShell** (Windows) oder eine vergleichbare Shell
-
-2. **Projekt herunterladen**
-   - Mit Git:  
-     ```bash
-     git clone https://github.com/LunaDEV-net/WebKess.git
-     cd WebKess
-     ```
-   - Alternativ über [GitHub Releases](https://github.com/LunaDEV-net/WebKess/releases) (Anleitung in Arbeit).
-
-3. **Virtuelle Umgebung erstellen**
-   - Führen Sie in Ihrem Projektverzeichnis folgenden Befehl aus:  
-     ```shell
-     python -m venv .venv
-     ```
-   - Verwenden Sie den Standardpfad `.venv`. Bei Änderungen muss das Startskript angepasst werden.
-
-4. **Programm ausführen**
-   - Windows:  
-     ```shell
-     .\.venv\Scripts\Activate.ps1
-     python src\main.py {arguments}
-     ```
-     Alternativ:  
-     ```shell
-     run.bat
-     ```
-   - Linux:  
-     ```bash
-     .venv/bin/python src/main.py {arguments}
-     ```
-
----
+5. `download.bat` übernimmt die Installation der 
 
 ## Nutzung
-Führen Sie das Programm über die Kommandozeile aus:
-```shell
-usage: main.py [-h] [--version] path_in path_out
-```
-
-| Argument    | Typ         | Beschreibung                                                            | Beispielwert       |
-|-------------|-------------|-------------------------------------------------------------------------|--------------------|
-| `path_in`   | `.csv Datei`| Pfad zur Eingabedatei                                                   | `data/input.csv`   |
-| `path_out`  | `.csv Datei`| Pfad zur Ausgabedatei. **Achtung: Überschreibt bestehende Dateien!**   | `data/output.csv`  |
-| `--version` |             | Gibt die aktuelle Version des Programms aus                            |                    |
-
+1. Laden Sie sich die Rohdaten (Anleitung TODO) runter.
+2. Benennen Sie diese in `input.csv` um und kopieren sie diese in den Ordner `data`. <br> 
+- WebKess <br>
+  - data\ <br>
+    - **input.csv** <br>
+  - docs\ <br>
+    - de-DE.md <br>
+  - example_data\ <br>
+  - README.md <br>
+  - run.bat <br>
+3. Führen Sie die `run.bat` aus, indem Sie diese im File-Explorer mit einem Doppelklick öffnen
+4. Sie erhalten ihre Datei im `data` Ordner als `output.csv` <br>
+- WebKess <br>
+  - data\ <br>
+    - input.csv <br>
+    - **output.csv** <br>
+  - docs\ <br>
+    - de-DE.md <br>
+  - example_data\ <br>
+  - README.md <br>
+  - run.bat <br>
 ---
-
 ## Support
 - Kontaktieren Sie mich persönlich oder erstellen Sie ein [GitHub Issue](https://github.com/LunaDEV-net/WebKess/issues).
 
