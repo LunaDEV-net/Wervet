@@ -1,50 +1,72 @@
 # WebKess: Bedienungsanleitung
 
-## Einführung
-**WebKess** ist ein lokales Python-Programm, das Rohdaten von [Aktion Saubere Hände](https://www.aktion-sauberehaende.de/ueber-uns-ash) in ein Excel-freundliches Format umwandelt.
+## Übersicht
+**WebKess** ist ein lokales Python-Programm, das Rohdaten von [Aktion Saubere Hände](https://www.aktion-sauberehaende.de/ueber-uns-ash) in ein Excel-freundliches Format umwandelt. Dieses Dokument bietet eine Anleitung zur Installation und Nutzung des Programms.
 
 ---
 
 ## Systemanforderungen
 - **Windows 11**
-- **Windows 10**, mit einer Betriebssystem-Buildnummer > `16299`  
+- **Windows 10**, mit einer Betriebssystem-Buildnummer über `16299`  
   _Hinweis: Die Buildnummer kann unter `Einstellungen > System > Info` bei den `Windows-Spezifikationen` überprüft werden._
 
 ---
 
 ## Installation
-### mit Downloadscript
-**Funktioniert nur auf Windows**
-1. Die Release-Website öffnen: https://github.com/LunaDEV-net/WebKess/releases
-2. Die Datei `download.bat` herunterladen. <br> <img src="imgs/2025-01-03_WebKess_Manual-Download-bat.jpg">
-3. Die heruntergeladene Datei in den Überordner kopieren, wo das Programm hingeladen werden soll: <br> Z.B. Wenn die `download.bat` im Pfad `D:\Programme\download.bat` liegt, dann wird das Programm nach `D:\Programme\WebKess` installiert
-4. Sobald die `download.bat` an der gewünschten Stelle liegt, diese im File-Explorer mit einem Doppelklick öffnen.
-5. `download.bat` übernimmt die Installation der Software
+
+### Installation über Download-Script
+**Hinweis:** Dieses Verfahren funktioniert nur auf Windows.
+
+1. Besuchen Sie die [Release-Website](https://github.com/LunaDEV-net/WebKess/releases).
+2. Laden Sie die Datei `download.bat` herunter.  <br> ![Download-Screenshot](imgs/2025-01-03_WebKess_Manual-Download-bat.jpg)
+3. Verschieben Sie die heruntergeladene Datei in den gewünschten Zielordner für das Programm:  
+   Beispiel: Wenn sich die `download.bat` im Pfad `D:\Programme\download.bat` befindet, wird das Programm in den Ordner `D:\Programme\WebKess` installiert.
+4. Doppelklicken Sie im Datei-Explorer auf die Datei `download.bat`, um sie auszuführen.
+5. Das Script installiert die Software automatisch.
+
+---
 
 ## Nutzung
-1. Laden Sie sich die Rohdaten **(Anleitung TODO)** runter, diese müssen eine `CSV`-Datei sein und das folgende Format haben (Zu Not einmal kurz mit Excel öffnen und überprüfen) 
 
-| KISS-Kürzel | IntervallId | Stationsname | Startdatum | Enddatum | BeobachtungsId | Beobachtungsdatum | Berufsgruppe | Indikation | Aktion | Handschuhe | Import KisRecordId Intervall | Import KisRecordId Beobachtung |
-|-------------|-------------|--------------|------------|----------|----------------|-------------------|--------------|------------|--------|------------|------------------------------|--------------------------------|
+1. **Rohdaten vorbereiten**
+   Laden Sie die Rohdaten herunter (eine detaillierte Anleitung folgt). Die Datei muss im CSV-Format vorliegen und sollte folgendes Schema aufweisen (zur Sicherheit mit Excel öffnen und überprüfen):
 
-2. Benennen Sie diese in `input.csv` um und kopieren sie diese in den Ordner `data`. <br> 
-- WebKess <br>
-  - data\ <br>
-    - **input.csv** <br>
-  - docs\ <br>
-    - de-DE.md <br>
-  - example_data\ <br>
-  - README.md <br>
-  - run.bat <br>
-3. Führen Sie die `run.bat` aus, indem Sie diese im File-Explorer mit einem Doppelklick öffnen
-4. Sie erhalten ihre Datei im `data` Ordner als `output.csv` <br>
-- WebKess <br>
-  - data\ <br>
-    - input.csv <br>
-    - **output.csv** <br>
-  - docs\ <br>
-    - de-DE.md <br>
-  - example_data\ <br>
-  - README.md <br>
-  - run.bat <br>
+   | KISS-Kürzel | IntervallId | Stationsname | Startdatum | Enddatum | BeobachtungsId | Beobachtungsdatum | Berufsgruppe | Indikation | Aktion | Handschuhe | Import KisRecordId Intervall | Import KisRecordId Beobachtung |
+   |--------------|-------------|--------------|------------|----------|----------------|-------------------|--------------|------------|--------|------------|------------------------------|--------------------------------|
+
+2. **Datei vorbereiten**
+   Benennen Sie die Datei in `input.csv` um und verschieben Sie diese in den Ordner `data`.
+   
+   Verzeichnisstruktur vor der Verarbeitung:
+   ```
+   WebKess
+   ├─ data\
+   │   └─ input.csv
+   ├─ docs\
+   │   └─ de-DE.md
+   ├─ example_data\
+   ├─ README.md
+   └─ run.bat
+   ```
+
+3. **Programm ausführen**
+   Führen Sie die Datei `run.bat` aus, indem Sie diese im Datei-Explorer per Doppelklick öffnen.
+
+4. **Ergebnisse speichern**
+   Nach der Verarbeitung wird die bearbeitete Datei als `output.csv` im Ordner `data` gespeichert.
+
+   Verzeichnisstruktur nach der Verarbeitung:
+   ```
+   WebKess
+   ├─ data\
+   │   ├─ input.csv
+   │   └─ output.csv
+   ├─ docs\
+   │   └─ de-DE.md
+   ├─ example_data\
+   ├─ README.md
+   └─ run.bat
+   ```
+
 ---
+
