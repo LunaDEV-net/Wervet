@@ -1,7 +1,7 @@
 # WebKess: Bedienungsanleitung
 
 ## Übersicht
-**WebKess** ist ein lokales Python-Programm, das Rohdaten von [Aktion Saubere Hände](https://www.aktion-sauberehaende.de/ueber-uns-ash) in ein Excel Format umwandelt, welches dann für Auswertungen oder Grafiken verwendet werden kann. Dieses Dokument bietet eine Anleitung zur Installation und Nutzung des Programms.
+**WebKess** ist ein lokales Python-Programm, das Rohdaten von [Aktion Saubere Hände](https://www.aktion-sauberehaende.de/ueber-uns-ash) in ein Excel Format umwandelt. Dieses Dokument bietet eine Anleitung zur Installation und Nutzung des Programms.
 
 ---
 
