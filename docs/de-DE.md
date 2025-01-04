@@ -17,10 +17,10 @@
 ### Installation über Download-Script
 **Hinweis:** Dieses Verfahren funktioniert nur auf Windows.
 
-1. Besuchen Sie die [Release-Website](https://github.com/LunaDEV-net/WebKess/releases).
-2. Laden Sie die Datei `download.bat` herunter.  <br> ![Download-Screenshot](imgs/2025-01-03_WebKess_Manual-Download-bat.jpg)
+1. Besuchen Sie die [Release-Website](https://github.com/LunaDEV-net/Wervet/releases).
+2. Laden Sie die Datei `download.bat` herunter.  <br> ![Download-Screenshot](imgs/2025-01-03_Wervet_Manual-Download-bat.jpg)
 3. Verschieben Sie die heruntergeladene Datei in den gewünschten Zielordner für das Programm:  
-   Beispiel: Wenn sich die `download.bat` im Pfad `D:\Programme\download.bat` befindet, wird das Programm in den Ordner `D:\Programme\WebKess` installiert.
+   Beispiel: Wenn sich die `download.bat` im Pfad `D:\Programme\download.bat` befindet, wird das Programm in den Ordner `D:\Programme\Wervet` installiert.
 4. Doppelklicken Sie im Datei-Explorer auf die Datei `download.bat`, um sie auszuführen.
 5. Das Script installiert die Software automatisch.
 
@@ -34,7 +34,7 @@
    | KISS-Kürzel | IntervallId | Stationsname | Startdatum | Enddatum | BeobachtungsId | Beobachtungsdatum | Berufsgruppe | Indikation | Aktion | Handschuhe | Import KisRecordId Intervall | Import KisRecordId Beobachtung |
    |--------------|-------------|--------------|------------|----------|----------------|-------------------|--------------|------------|--------|------------|------------------------------|--------------------------------|
 
-2. Öffnen Sie den Datei-Explorer und navigieren Sie Ordner, in dem Sie das WebKess-Tool abgelegt haben.
+2. Öffnen Sie den Datei-Explorer und navigieren Sie Ordner, in dem Sie das Wervet-Tool abgelegt haben.
 
 3. **Datei vorbereiten**
    Kopieren Sie die heruntergeladene Datei in den Ordner `data` und benennen Sie sie in `input.csv` (Auf Groß- & Kleinschreibung achten!) um.
@@ -42,7 +42,7 @@
 
    Verzeichnisstruktur vor der Verarbeitung:
    ```
-   WebKess
+   Wervet
    ├─ data\
    │   └─ input.csv
    ├─ docs\
@@ -52,7 +52,7 @@
    ```
 
 4. **Programm ausführen**
-   Führen Sie die Datei `run.bat` im WebKess-Ordner aus, indem Sie diese im Datei-Explorer per Doppelklick öffnen.
+   Führen Sie die Datei `run.bat` im Wervet-Ordner aus, indem Sie diese im Datei-Explorer per Doppelklick öffnen.
 
 5. **Ergebnisse speichern**
    Nach der Verarbeitung wird die bearbeitete Datei als `output.csv` im Ordner `data` gespeichert.
@@ -60,7 +60,7 @@
 
    Verzeichnisstruktur nach der Verarbeitung:
    ```
-   WebKess
+   Wervet
    ├─ data\
    │   ├─ input.csv
    │   └─ output.csv

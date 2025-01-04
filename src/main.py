@@ -26,7 +26,7 @@ def main(path_in: pathlib.Path, path_out: pathlib.Path):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description="A local python tool to turn raw data from the Aktion Saubere Hände into an excel friendly dataset.",
-        epilog=r'https://github.com/LunaDEV-net/WebKess  Support: Contact me personally or write a [Github Issue](https://github.com/LunaDEV-net/WebKess/issues)'
+        epilog=r'https://github.com/LunaDEV-net/Wervet  Support: Contact me personally or write a [Github Issue](https://github.com/LunaDEV-net/Wervet/issues)'
     )
     parser.add_argument('--version', action='version', version=__version__)
     parser.add_argument('path_in', type=pathlib.Path, help='Input CSV file path')

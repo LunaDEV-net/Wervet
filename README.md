@@ -1,5 +1,5 @@
 
-# WebKess
+# Wervet
 
 A local python tool to turn raw data from the [Aktion Saubere Hände](https://www.aktion-sauberehaende.de/ueber-uns-ash) into an Excel friendly dataset.
 ## usage
@@ -24,8 +24,8 @@ usage: main.py [-h] [--version] path_in path_out
 
 ### 1. Download Projekt using git
 ```bash
-git clone https://github.com/LunaDEV-net/WebKess.git
-cd WebKess
+git clone https://github.com/LunaDEV-net/Wervet.git
+cd Wervet
 ```
 ### 1.1 Download using GitHub releases
 
@@ -53,12 +53,7 @@ run.ps1
 .venv/bin/python src/main.py {arguments} (see usage)
 ```
 ## Known Problems
--> see [Issues](https://github.com/LunaDEV-net/WebKess/issues)
+-> see [Issues](https://github.com/LunaDEV-net/Wervet/issues)
 ## Support
 
-Contact me personally or write a [GitHub Issue](https://github.com/LunaDEV-net/WebKess/issues)
-
-
-
-
-https://docs.python.org/3/library/venv.html
+Contact me personally or write a [GitHub Issue](https://github.com/LunaDEV-net/Wervet/issues)

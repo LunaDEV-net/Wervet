@@ -1,5 +1,5 @@
 @echo off
-echo Herunterladen in Dateipfad: %cd%\WebKess
+echo Herunterladen in Dateipfad: %cd%\Wervet
 echo.
 
 echo Schaue ob winget vorhanden ist
@@ -41,9 +41,9 @@ echo.
 echo.
 echo Klonen
 echo.
-git clone https://github.com/LunaDEV-net/WebKess
+git clone https://github.com/LunaDEV-net/Wervet
 echo.
-cd WebKess
+cd Wervet
 explorer .
 cd Scripts
 install_venv.bat

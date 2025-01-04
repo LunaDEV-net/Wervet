@@ -1,4 +1,4 @@
-echo "Jans WebKess auf Windows Powershell"
+echo "Wervet auf Windows Powershell"
 echo "in venv gehen"
 .\.venv\Scripts\Activate.ps1
 echo "main ausführen in standart configuration (data Ordner)"
