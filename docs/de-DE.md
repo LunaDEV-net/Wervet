@@ -1,7 +1,7 @@
 # WebKess: Bedienungsanleitung
 
 ## Übersicht
-**WebKess** ist ein lokales Python-Programm, das Rohdaten von [Aktion Saubere Hände](https://www.aktion-sauberehaende.de/ueber-uns-ash) in ein Excel-freundliches Format umwandelt. Dieses Dokument bietet eine Anleitung zur Installation und Nutzung des Programms.
+**WebKess** ist ein lokales Python-Programm, das Rohdaten von [Aktion Saubere Hände](https://www.aktion-sauberehaende.de/ueber-uns-ash) in ein Excel Format umwandelt, welches dann für Auswertungen oder Grafiken verwendet werden kann. Dieses Dokument bietet eine Anleitung zur Installation und Nutzung des Programms.
 
 ---
 
@@ -29,13 +29,13 @@
 ## Nutzung
 
 1. **Rohdaten vorbereiten**
-   Laden Sie die Rohdaten herunter (eine detaillierte Anleitung folgt). Die Datei muss im CSV-Format vorliegen und sollte folgendes Schema aufweisen (zur Sicherheit mit Excel öffnen und überprüfen):
+   Laden Sie die Rohdaten herunter. Die Datei muss im CSV-Format vorliegen und sollte folgendes Schema aufweisen (zur Sicherheit mit Excel öffnen und überprüfen):
 
    | KISS-Kürzel | IntervallId | Stationsname | Startdatum | Enddatum | BeobachtungsId | Beobachtungsdatum | Berufsgruppe | Indikation | Aktion | Handschuhe | Import KisRecordId Intervall | Import KisRecordId Beobachtung |
    |--------------|-------------|--------------|------------|----------|----------------|-------------------|--------------|------------|--------|------------|------------------------------|--------------------------------|
 
 2. **Datei vorbereiten**
-   Benennen Sie die Datei in `input.csv` um und verschieben Sie diese in den Ordner `data`.
+   Benennen Sie die Datei im File-Explorer in `input.csv` um und verschieben Sie diese in den Ordner `data`.
    
    Verzeichnisstruktur vor der Verarbeitung:
    ```
