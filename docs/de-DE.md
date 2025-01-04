@@ -19,10 +19,14 @@
 2. Die Datei `download.bat` herunterladen. <br> <img src="imgs/2025-01-03_WebKess_Manual-Download-bat.jpg">
 3. Die heruntergeladene Datei in den Überordner kopieren, wo das Programm hingeladen werden soll: <br> Z.B. Wenn die `download.bat` im Pfad `D:\Programme\download.bat` liegt, dann wird das Programm nach `D:\Programme\WebKess` installiert
 4. Sobald die `download.bat` an der gewünschten Stelle liegt, diese im File-Explorer mit einem Doppelklick öffnen.
-5. `download.bat` übernimmt die Installation der 
+5. `download.bat` übernimmt die Installation der Software
 
 ## Nutzung
-1. Laden Sie sich die Rohdaten (Anleitung TODO) runter.
+1. Laden Sie sich die Rohdaten **(Anleitung TODO)** runter, diese müssen eine `CSV`-Datei sein und das folgende Format haben (Zu Not einmal kurz mit Excel öffnen und überprüfen) 
+
+| KISS-Kürzel | IntervallId | Stationsname | Startdatum | Enddatum | BeobachtungsId | Beobachtungsdatum | Berufsgruppe | Indikation | Aktion | Handschuhe | Import KisRecordId Intervall | Import KisRecordId Beobachtung |
+|-------------|-------------|--------------|------------|----------|----------------|-------------------|--------------|------------|--------|------------|------------------------------|--------------------------------|
+
 2. Benennen Sie diese in `input.csv` um und kopieren sie diese in den Ordner `data`. <br> 
 - WebKess <br>
   - data\ <br>
@@ -43,8 +47,4 @@
   - example_data\ <br>
   - README.md <br>
   - run.bat <br>
----
-## Support
-- Kontaktieren Sie mich persönlich oder erstellen Sie ein [GitHub Issue](https://github.com/LunaDEV-net/WebKess/issues).
-
 ---
