@@ -47,7 +47,6 @@
    │   └─ input.csv
    ├─ docs\
    │   └─ de-DE.md
-   ├─ example_data\
    ├─ README.md
    └─ run.bat
    ```
@@ -67,7 +66,6 @@
    │   └─ output.csv
    ├─ docs\
    │   └─ de-DE.md
-   ├─ example_data\
    ├─ README.md
    └─ run.bat
    ```
