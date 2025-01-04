@@ -34,9 +34,12 @@
    | KISS-Kürzel | IntervallId | Stationsname | Startdatum | Enddatum | BeobachtungsId | Beobachtungsdatum | Berufsgruppe | Indikation | Aktion | Handschuhe | Import KisRecordId Intervall | Import KisRecordId Beobachtung |
    |--------------|-------------|--------------|------------|----------|----------------|-------------------|--------------|------------|--------|------------|------------------------------|--------------------------------|
 
-2. **Datei vorbereiten**
-   Benennen Sie die Datei im File-Explorer in `input.csv` um und verschieben Sie diese in den Ordner `data`.
-   
+2. Öffnen Sie den Datei-Explorer und navigieren Sie Ordner, in dem Sie das WebKess-Tool abgelegt haben.
+
+3. **Datei vorbereiten**
+   Kopieren Sie die heruntergeladene Datei in den Ordner `data` und benennen Sie sie in `input.csv` (Auf Groß- & Kleinschreibung achten!) um.
+   Sollte bereits eine `input.csv` im Ordner vorhanden sein, achten Sie darauf, dass Sie die alte `input.csv` umbenennen oder löschen.
+
    Verzeichnisstruktur vor der Verarbeitung:
    ```
    WebKess
