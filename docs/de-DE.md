@@ -52,8 +52,8 @@
    └─ run.bat
    ```
 
-3. **Programm ausführen**
-   Führen Sie die Datei `run.bat` aus, indem Sie diese im Datei-Explorer per Doppelklick öffnen.
+4. **Programm ausführen**
+   Führen Sie die Datei `run.bat` im WebKess-Ordner aus, indem Sie diese im Datei-Explorer per Doppelklick öffnen.
 
 4. **Ergebnisse speichern**
    Nach der Verarbeitung wird die bearbeitete Datei als `output.csv` im Ordner `data` gespeichert.
