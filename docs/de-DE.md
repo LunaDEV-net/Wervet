@@ -71,6 +71,6 @@
    ├─ README.md
    └─ run.bat
    ```
-
+6. **Ergebnisse in Excel öffnen**
 ---
 
