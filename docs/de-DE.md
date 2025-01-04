@@ -57,6 +57,7 @@
 
 5. **Ergebnisse speichern**
    Nach der Verarbeitung wird die bearbeitete Datei als `output.csv` im Ordner `data` gespeichert.
+   **Diese wird bei jedem Programmstart überschrieben!**
 
    Verzeichnisstruktur nach der Verarbeitung:
    ```
