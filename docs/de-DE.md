@@ -18,7 +18,7 @@
 **Hinweis:** Dieses Verfahren funktioniert nur auf Windows.
 
 1. Besuchen Sie die [Release-Website](https://github.com/LunaDEV-net/Wervet/releases).
-2. Laden Sie die Datei `download.bat` herunter.  <br> ![Download-Screenshot](imgs/2025-01-03_Wervet_Manual-Download-bat.jpg)
+2. Laden Sie die Datei `download.bat` herunter.  <br> ![Download-Screenshot](https://raw.githubusercontent.com/LunaDEV-net/Wervet/main/docs/imgs/2025-01-03_WebKess_Manual-Download-bat.jpg)
 3. Verschieben Sie die heruntergeladene Datei in den gewünschten Zielordner für das Programm:  
    Beispiel: Wenn sich die `download.bat` im Pfad `D:\Programme\download.bat` befindet, wird das Programm in den Ordner `D:\Programme\Wervet` installiert.
 4. Doppelklicken Sie im Datei-Explorer auf die Datei `download.bat`, um sie auszuführen.
