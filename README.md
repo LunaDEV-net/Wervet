@@ -1,4 +1,11 @@
 
+# This will be maintaint at my codeberg account
+see https://codeberg.org/lunadev/Wervet
+
+
+
+
+
 # Wervet
 
 A local python tool to turn raw data from the [Aktion Saubere Hände](https://www.aktion-sauberehaende.de/ueber-uns-ash) into an Excel friendly dataset.
